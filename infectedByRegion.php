@@ -6,27 +6,27 @@
 	$infectedByRegion = $data->infectedByRegion;
 
 
-	$grafico = new PHPlot(800, 600);
+	$plot = new PHPlot(750, 450);
 
-	$grafico->SetFileFormat("png");
+	$plot->SetFileFormat("png");
 
-	#Indicamos o títul do gráfico e o título dos dados no eixo X e Y do mesmo
-	$grafico->SetTitle("Infected by region");
-	$grafico->SetXTitle("Eixo X");
-	$grafico->SetYTitle("Eixo Y");
+	
+	$plot->SetTitle("Infectados por região");
+	$plot->SetXTitle("Número de infectados");
+	$plot->SetYTitle("Região");
 
 
-	#Definimos os dados do gráfico
+	
 	$dados = array();
 	foreach($infectedByRegion as $state):
 		array_push($dados, array($state->state, $state->count));
 	endforeach;
 
-	$grafico->SetDataValues($dados);
+	$plot->SetDataValues($dados);
 
-	#Neste caso, usariamos o gráfico em barras
-	$grafico->SetPlotType("bars");
+	
+	$plot->SetPlotType("bars");
 
-	#Exibimos o gráfico
-	$grafico->DrawGraph();
+	
+	$plot->DrawGraph();
 ?>
