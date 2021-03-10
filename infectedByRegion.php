@@ -11,9 +11,9 @@
 	$plot->SetFileFormat("png");
 
 	
-	$plot->SetTitle("Infectados por região");
-	$plot->SetXTitle("Número de infectados");
-	$plot->SetYTitle("Região");
+	$plot->SetTitle("Infectados por estado");
+	$plot->SetXTitle("Estado");
+	$plot->SetYTitle("Quantidade de infectados");
 
 
 	
