@@ -5,7 +5,7 @@
 
 body {
 
-    background-color: #CEB2C8;
+    background-color: #ffff;
 }
 
 header h1 {
@@ -26,12 +26,12 @@ main {
     padding: 2.4rem;
     border-radius: 5rem;
 
-    background-color: #bb9ab9;
+    background-color: #dac9d6;
 }
 
 .table-info table {
 
-    border: 1px solid #442835;
+    border: 1px solid #954169;
 
     width: 17rem;
     height: 20rem;
@@ -44,12 +44,12 @@ main {
 }
 
 .table-info table th { 
-    border-bottom:1px solid black;
+    border-bottom:1px solid #954169;
 }
 
 .table-info table td { 
-    border-left:1px solid black;
-    border-bottom:1px solid black;
+    border-left:1px solid #954169;
+    border-bottom:1px solid #954169;
 
     text-align: center;
 }
