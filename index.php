@@ -12,6 +12,13 @@
     <?php
         $url = "https://api.apify.com/v2/key-value-stores/TyToNta7jGKkpszMZ/records/LATEST?disableRedirect=true";
         $data = json_decode(file_get_contents($url));
+
+        date_default_timezone_set('America/Sao_Paulo');
+
+        $ts = strtotime($data->lastUpdatedAtApify);
+        $updated = new DateTime("@$ts");
+
+        $updated->setTimezone(new DateTimeZone('America/Sao_Paulo'));
     ?>
     <header>
         <h1>
@@ -47,14 +54,13 @@
                     </tr>
                 </tbody>
             </table>
-            <spam>Ultima atualização: <?php echo(date("d-m-Y H:i", strtotime($data->lastUpdatedAtApify - 3))) . '<br>'; ?></spam>
         </div>
     </main>
     
 
     <footer>
         <span class='api-update'> Ultima atualização da API:
-            <?php echo(date("d-m-Y H:i", strtotime($data->lastUpdatedAtApify - 3))) . '<br>'; ?>
+            <?php echo($updated->format('d-m-Y H:i')) . '<br>'; ?>
         </span>
         <span class='source'> Fonte: 
             <?php
