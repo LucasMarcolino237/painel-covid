@@ -47,14 +47,14 @@
                     </tr>
                 </tbody>
             </table>
-            <spam>Ultima atualização: <?php echo(date("d-m-Y H:i", strtotime($data->lastUpdatedAtApify))) . '<br>'; ?></spam>
+            <spam>Ultima atualização: <?php echo(date("d-m-Y H:i", strtotime($data->lastUpdatedAtApify - 3))) . '<br>'; ?></spam>
         </div>
     </main>
     
 
     <footer>
         <span class='api-update'> Ultima atualização da API:
-            <?php echo(date("d-m-Y H:i", strtotime($data->lastUpdatedAtApify))) . '<br>'; ?>
+            <?php echo(date("d-m-Y H:i", strtotime($data->lastUpdatedAtApify - 3))) . '<br>'; ?>
         </span>
         <span class='source'> Fonte: 
             <?php
